@@ -28,6 +28,7 @@
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Définition} % definition numbers are dependent on theorem numbers
 \newtheorem{ex}[thm]{Example} % same for example numbers
+\newtheorem{rmrk}[thm]{Remarque}
 
 
 \title{Principes Mathématique de Premier Cycle}
@@ -39,6 +40,92 @@
 \date{}
 \tableofcontents
 \newpage
+\part{Algèbre}
+\chapter{Groupes}
+\label{ch:group}
 
+\section{Groupes}
+\label{sec:group-group}
+\section{Groupes Quotient}
+\label{sec:group-quotients}
+
+\label{part:alg}
+\chapter{Anneaux}
+\label{ch:ring}
+\section{Introdction}
+\label{sec:ring-intro}
+
+\subsubsection{Prérequis}
+Il est recomandé d'avoir lu et d'être familier avec les sections \ref{sec:group-group} à \ref{sec:group-quotients} du chapitre \ref{ch:group} sur les groupes.
+
+\subsection{Histoire de la Théorie des Anneaux}
+La théorie des anneaux est une discipline d'origine du $19^e$ siècle mais qui a fleuris vers les années 1930. Julius Wilhelm Richard Dedekind ($1831-1916$) était un mathématicien allemand qui a grandement dévéloppé la théorie des anneaux commutatif. Durant les premières décénies du $20^e$ siècle, Emmy Noether ($1882-1935$) explore les anneaux non-commutatif et les idéaux. D'autres noms importants incluent Nathan Jacobson (USA, $1910-1999$), Irving Kaplansky (Canada, $1917-2006$), Joseph wedderburn (UK, $1882-1948$) et plus encore.
+
+La grande idée derrière la théorie des Anneaux est de généraliser les propriétés des entiers. Quel structures algébriques agissent de manières similaires? Ce qui est fait en imposant des restrictions sur les corps en permetant des éléments non-inversible et un produit qui n'est pas nécéssairement commutatif.
+
+Certains exemples d'anneaux importants sont les entiers, les polynomes à plusieur variables sur les nombres complexes, les matrices avec des entrées réeles.
+
+\subsection{Notions de Bases}
+\begin{defn}
+\label{def:ring}
+Un anneau $A$ est un ensemble muni de deux opérations binaires: l'addition $+$ et la multiplication $\times$ ($a\times b$ sera noté $ab$) tel que
+\begin{enumerate}
+\item $(A,+)$ est un groupe abélien d'élément neutre $0$ ou $0_A$.
+\item $\times$ est un opération associative, c'est à dire que $(ab)c=a(bc)$.
+\item $\times$ distribue sur $+$, c'est à dire que $a(b+c)=ab+ac$ et $(b+c)a=ba+ca$.
+\item Il existe un $1$ ou $1_A\in A$ tel que $1a=a1=a$ pour tout  $a\in A$. Cette propriété n'est pas nécéssaire pour un anneau.
+\end{enumerate}
+
+L'élément $1$ s'appel l'unité ou l'identité multiplicative de l'anneau.
+
+Un anneau avec une identité multiplicative est dit unitaire et un anneau sans identié multiplicative est dit non-unitaire.
+\end{defn}
+
+\begin{defn}
+\label{def:ring-comut}
+L'anneau $A$ est commutatif si les élément commutent sous $\times$. 
+\end{defn}
+
+\begin{rmrk}
+On permet que $0_A=1_A$.
+\end{rmrk}
+
+\begin{ex}
+$\mathbb{Z}$,$\mathbb{Z}_n$, $\mathbb{Z}[x]$ et $M_n\left(\mathbb{Z}\right)$ sont tous des anneaux sous l'addition et la multiplication habituelle.
+
+$D=\left\{ f:\mathbb{R}\rightarrow\mathbb{R}\right\}$ est un anneau si on prend
+\begin{align*}
++:D\times D&\rightarrow D\\
+(f,g)&\mapsto f(x)+g(x)\\
+\times:D\times D&\rightarrow D\\
+(f,g)&\mapsto f(x)g(x)
+\end{align*}
+
+Par contre si on prend la composition comme operation multiplicative, alors $D$ ne sera pas un anneau.
+\begin{align*}
+f\circ(g+h)\neq f\circ g+f\circ h
+\end{align*}
+
+Si $A$ et $B$ sont des anneaux alors $A\times B$ est un anneau.
+
+Similairement si $A_i$ est un anneau pour tout $1\leq i\leq n$ alors $A_1\times A_2\times...\times A_n$ est aussi un anneau.
+\end{ex}
+
+\begin{defn}
+\label{def:ring-div0}
+Soit $a\in A$ un anneau.
+
+\begin{itemize}
+\item $a$ est un diviseur de zéro à gauche s'il existe un $b\in A\setminus\{0\}$ tel que $ab=0$
+\item $a$ est un diviseur de zéro à droite s'il existe un $b\in A\setminus\{0\}$ tel que $ba=0$
+\item $a$ est un diviseur de zéros'il existe un $b\in A\setminus\{0\}$ tel que $ab=ba=0$
+\end{itemize}
+
+On dénote l'ensemble des diviseurs de zéro d'un anneau $A$ par $DZ(A)$.
+\end{defn}
+
+\begin{defn}
+Un sous-ensemble  $S$ d'un anneau $A$
+\end{defn}
 
 \end{document}
