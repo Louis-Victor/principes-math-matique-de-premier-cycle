@@ -1,1 +1,1 @@
-# principes-math-matique-de-premier-cycle
+# principes-mathématique-de-premier-cycle

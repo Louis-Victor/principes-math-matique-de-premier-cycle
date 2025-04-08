@@ -79,6 +79,8 @@ Un anneau $A$ est un ensemble muni de deux opérations binaires: l'addition $+$ 
 L'élément $1$ s'appel l'unité ou l'identité multiplicative de l'anneau.
 
 Un anneau avec une identité multiplicative est dit unitaire et un anneau sans identié multiplicative est dit non-unitaire.
+
+Pour le reste de cette section, nous allon considérer uniquement les anneaux unitaires.
 \end{defn}
 
 \begin{defn}
@@ -125,7 +127,17 @@ On dénote l'ensemble des diviseurs de zéro d'un anneau $A$ par $DZ(A)$.
 \end{defn}
 
 \begin{defn}
-Un sous-ensemble  $S$ d'un anneau $A$
+Un sous-ensemble  $S$ d'un anneau $A$ est un sous-anneau de $A$ si $S$ lui même est un anneau sous les operations de $A$ et $1_S=1_A$.
 \end{defn}
+
+\begin{thm}
+Un sous-ensemble $S$ d'un anneau $A$ est un sous-anneau $\iff$ $1_A,ab, a-b\in S$ pour tout $a,b\in S$.
+\end{thm}
+
+\section{Idéaux}
+\label{sec:ideal}
+\begin{rmrk}
+Un sous-groupe $N$ d'un groupe $G$ est dit normal si $g\star n\in N$ pour tout $g\in G,n\in N$ où $g\star n$ dénote la  conjugaison $g\star n=gng^{-1}$.
+\end{rmrk}
 
 \end{document}
