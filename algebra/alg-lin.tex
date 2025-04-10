@@ -1,0 +1,45 @@
+\label{ch:alg-lin}
+\section{Polynomes Iréductibles}
+\label{sec:alg-lin-poly-ireduct}
+
+\begin{defn}
+Soit $K$ un corps et $p(x)\in K[x]$ un polynome. $p(x)$ est dit iréductible s'il est de degré positif et ne se factorise pas de manière non-triviale. C'est à dire que si $p(x)=f(x)g(x)$ pour certains $f(x),g(x)\in K[x]$ alors $\deg f=0$  ou $deg g=0$.
+\end{defn}
+
+
+\begin{lm}
+\label{lm:alg-lin:complex-roots}
+Soit $p(x)\in\mathbb{R}[x]$ avec $\deg p\geq2$ et $\alpha\in\mathbb{C}$ une racine  de  $p(x)$. Alors $\overline{\alpha}$ est une racine de $p(x)$
+\end{lm}
+\begin{proof}
+Posons $p(x)=a_0+a_1x+a_2x^2+...+a_nx^n$. On a donc
+
+\begin{align*}
+0&=p(\alpha)\\
+0&=a_0+a_1\alpha+a_2\alpha^2+...+a_n\alpha^n\\
+\overline{0}&=\overline{a_0+a_1\alpha+a_2\alpha^2+...+a_n\alpha^n}\\
+0&=\overline{a_0+a_1\alpha+a_2\alpha^2+...+a_n\alpha^n}\\
+&=\overline{a_0}+\overline{a_1\alpha}+\overline{a_2\alpha^2}+...+\overline{a_n\alpha^n}\\
+&=a_0+a_1\overline{\alpha}+a_2\overline{\alpha^2}+...+a_n\overline{\alpha^n}\\
+0&=p(\overline{\alpha})
+\end{align*}
+
+\end{proof}
+\begin{prop}
+Soient $p(x)\in\mathbb{C}[x]$ et $q(x)\in\mathbb{R}[x]$.
+
+\begin{enumerate}
+\item\label{item:alg-clos} $p(x)$  est iréductible si et seulement si $\deg p=1$.
+\item $q(x)$ est iréductible si et seulement si $\deg q=1$ ou $\deg q =2$ et $q(x)$ n'a aucune racine.
+\end{enumerate}
+Le point \ref{item:alg-clos} s'applique également pour tout corps algébriquement clos.
+\end{prop}
+\begin{proof}
+Soit $p(x)\in\mathbb{C}[x]$ un polynome iréductible.
+
+Si $\deg p>2$ alors soit $p(x)$ a une racine réele $x_0$ ou $p(x)$ a une racine complexe $\alpha\in\mathbb{C}\setminus\mathbb{R}$.
+
+Si $p(x_0)=0$ alors $p(x)=(x-x_0)q(x)+r(x)$. Mais comme $p(x_0)=0=(x_0-x_0)q(x_0)+r(x_0)=r(x_0)$ alors $r(x)=0$. Donc $p(x)=(x-x_0)q(x)$ avec $\deg q\geq0$. Donc $p(x)$ n'est pas iréductible.
+
+Si $p(\alpha)=0$ alors $p(\overline{\alpha})=0$ par le lemme \ref{lm:alg-lin:complex-roots}. On a donc $(x-\alpha)(x-\overline{\alpha})=x^2-(\alpha+\overline{\alpha})x+\alpha\overline{\alpha}$ qui divise $p(x)$ donc $p(x)$ n'est pas iréductible. $\Longrightarrow\Longleftarrow$
+\end{proof}
