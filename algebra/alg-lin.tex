@@ -43,3 +43,25 @@ Si $p(x_0)=0$ alors $p(x)=(x-x_0)q(x)+r(x)$. Mais comme $p(x_0)=0=(x_0-x_0)q(x_0
 
 Si $p(\alpha)=0$ alors $p(\overline{\alpha})=0$ par le lemme \ref{lm:alg:lin:ireduct:complex-roots}. On a donc $(x-\alpha)(x-\overline{\alpha})=x^2-(\alpha+\overline{\alpha})x+\alpha\overline{\alpha}$ qui divise $p(x)$ donc $p(x)$ n'est pas iréductible. $\Longrightarrow\Longleftarrow$
 \end{proof}
+
+
+\section{Théorème de Décomposition primaire}
+\label{sec:alg:lin:dec-primaire}
+
+\begin{lm}
+\label{lm:alg:lin:dec-primaire:lema-1}
+Soit $p(x)$ un polynome iréductible qui divise $f(x)g(x)$ avec $f(x),g(x)\in K[x]$. Alors $p(x)|f(x)$ ou $p(x)|g(x)$.
+\end{lm}
+\begin{proof}
+Sans perte de généralité, supposons que $f(x)$ et $g(x)$ sont unitaires. Supposons que $p(x)\not|f(x)$. Soit $m(x)=pgcd(p(x),f(x))$.
+\end{proof}
+\begin{rmrk}
+On peut prouver ce lemme avec le fait que $K[x]$ est un domaine a idéaux principaux (DIP) et que dans un DIP si un élément est iréductible alors celui ci est premier.
+\end{rmrk}
+
+\begin{thm}\textbf{Décomposition primaire.}
+\label{th:alg:lin:dec-primaire:dec-primaire}
+Soit $V$ un espace vectoriel de dimention arbitraire sur un corps $K$ et $T:V\longrightarrow V$ une transformation linéaire tel que $p(T)=0$ pour un certain polynome $p(x)=p_1^{a_1}(x)p_2^{a_2}(x)...p_r^{a_r}(x)\in K[x]$ où chaque $p_i(x)$ est iréductible et $p_i(x)\neq p_j(x)$ si $i\neq j$.
+
+Alors $V=\ker\left(p_1^{a_1}(T)\right)\bigoplus...\bigoplus\ker\left(p_r^{a_r}(T)\right)$
+\end{thm}
