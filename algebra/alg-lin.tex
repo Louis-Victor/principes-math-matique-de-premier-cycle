@@ -1,6 +1,6 @@
 \label{ch:alg-lin}
 \section{Polynomes Iréductibles}
-\label{sec:alg-lin-poly-ireduct}
+\label{sec:alg:lin:ireduct}
 
 \begin{defn}
 Soit $K$ un corps et $p(x)\in K[x]$ un polynome. $p(x)$ est dit iréductible s'il est de degré positif et ne se factorise pas de manière non-triviale. C'est à dire que si $p(x)=f(x)g(x)$ pour certains $f(x),g(x)\in K[x]$ alors $\deg f=0$  ou $deg g=0$.
@@ -8,7 +8,7 @@ Soit $K$ un corps et $p(x)\in K[x]$ un polynome. $p(x)$ est dit iréductible s'i
 
 
 \begin{lm}
-\label{lm:alg-lin:complex-roots}
+\label{lm:alg:lin:ireduct:complex-roots}
 Soit $p(x)\in\mathbb{R}[x]$ avec $\deg p\geq2$ et $\alpha\in\mathbb{C}$ une racine  de  $p(x)$. Alors $\overline{\alpha}$ est une racine de $p(x)$
 \end{lm}
 \begin{proof}
@@ -29,10 +29,10 @@ Posons $p(x)=a_0+a_1x+a_2x^2+...+a_nx^n$. On a donc
 Soient $p(x)\in\mathbb{C}[x]$ et $q(x)\in\mathbb{R}[x]$.
 
 \begin{enumerate}
-\item\label{item:alg-clos} $p(x)$  est iréductible si et seulement si $\deg p=1$.
+\item\label{prop:item:alg:lin:ireduct:clos} $p(x)$  est iréductible si et seulement si $\deg p=1$.
 \item $q(x)$ est iréductible si et seulement si $\deg q=1$ ou $\deg q =2$ et $q(x)$ n'a aucune racine.
 \end{enumerate}
-Le point \ref{item:alg-clos} s'applique également pour tout corps algébriquement clos.
+Le point \ref{prop:item:alg:lin:ireduct:clos} s'applique également pour tout corps algébriquement clos.
 \end{prop}
 \begin{proof}
 Soit $p(x)\in\mathbb{C}[x]$ un polynome iréductible.
@@ -41,5 +41,5 @@ Si $\deg p>2$ alors soit $p(x)$ a une racine réele $x_0$ ou $p(x)$ a une racine
 
 Si $p(x_0)=0$ alors $p(x)=(x-x_0)q(x)+r(x)$. Mais comme $p(x_0)=0=(x_0-x_0)q(x_0)+r(x_0)=r(x_0)$ alors $r(x)=0$. Donc $p(x)=(x-x_0)q(x)$ avec $\deg q\geq0$. Donc $p(x)$ n'est pas iréductible.
 
-Si $p(\alpha)=0$ alors $p(\overline{\alpha})=0$ par le lemme \ref{lm:alg-lin:complex-roots}. On a donc $(x-\alpha)(x-\overline{\alpha})=x^2-(\alpha+\overline{\alpha})x+\alpha\overline{\alpha}$ qui divise $p(x)$ donc $p(x)$ n'est pas iréductible. $\Longrightarrow\Longleftarrow$
+Si $p(\alpha)=0$ alors $p(\overline{\alpha})=0$ par le lemme \ref{lm:alg:lin:ireduct:complex-roots}. On a donc $(x-\alpha)(x-\overline{\alpha})=x^2-(\alpha+\overline{\alpha})x+\alpha\overline{\alpha}$ qui divise $p(x)$ donc $p(x)$ n'est pas iréductible. $\Longrightarrow\Longleftarrow$
 \end{proof}

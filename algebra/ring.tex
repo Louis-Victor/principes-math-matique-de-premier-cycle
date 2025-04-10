@@ -1,9 +1,8 @@
-\label{ch:ring}
 \section{Introdction}
-\label{sec:ring-intro}
+\label{sec:alg:ring:intro}
 
 \subsubsection{Prérequis}
-Il est recomandé d'avoir lu et d'être familier avec les sections \ref{sec:group-group} à \ref{sec:group-quotients} du chapitre \ref{ch:group} sur les groupes.
+Il est recomandé d'avoir lu et d'être familier avec les sections \ref{sec:alg:group:group} à \ref{sec:alg:group:quotients} du chapitre \ref{ch:alg:group} sur les groupes.
 
 \subsection{Histoire de la Théorie des Anneaux}
 La théorie des anneaux est une discipline d'origine du $19^e$ siècle mais qui a fleuris vers les années 1930. Julius Wilhelm Richard Dedekind ($1831-1916$) était un mathématicien allemand qui a grandement dévéloppé la théorie des anneaux commutatif. Durant les premières décénies du $20^e$ siècle, Emmy Noether ($1882-1935$) explore les anneaux non-commutatif et les idéaux. D'autres noms importants incluent Nathan Jacobson (USA, $1910-1999$), Irving Kaplansky (Canada, $1917-2006$), Joseph wedderburn (UK, $1882-1948$) et plus encore.
@@ -14,7 +13,7 @@ Certains exemples d'anneaux importants sont les entiers, les polynomes à plusie
 
 \subsection{Notions de Bases}
 \begin{defn}
-\label{def:ring}
+\label{def:alg:ring:intro:ring}
 Un anneau $A$ est un ensemble muni de deux opérations binaires: l'addition $+$ et la multiplication $\times$ ($a\times b$ sera noté $ab$) tel que
 \begin{enumerate}
 \item $(A,+)$ est un groupe abélien d'élément neutre $0$ ou $0_A$.
@@ -31,7 +30,7 @@ Pour le reste de cette section, nous allon considérer uniquement les anneaux un
 \end{defn}
 
 \begin{defn}
-\label{def:ring-comut}
+\label{def:alg:ring:intro:comut}
 L'anneau $A$ est commutatif si les élément commutent sous $\times$. 
 \end{defn}
 
@@ -61,7 +60,7 @@ Similairement si $A_i$ est un anneau pour tout $1\leq i\leq n$ alors $A_1\times 
 \end{ex}
 
 \begin{defn}
-\label{def:ring-div0}
+\label{def:alg:ring:intro:div0}
 Soit $a\in A$ un anneau.
 
 \begin{itemize}
@@ -88,7 +87,7 @@ Un sous-ensemble $S$ d'un anneau $A$ est un sous-anneau $\iff$ $1_A,ab, a-b\in S
 \end{thm}
 
 \section{Idéaux}
-\label{sec:ideal}
+\label{sec:alg:ring:ideal}
 \begin{rmrk}
 Un sous-groupe $N$ d'un groupe $G$ est dit normal si $g\star n\in N$ pour tout $g\in G,n\in N$ où $g\star n$ dénote la  conjugaison $g\star n=gng^{-1}$.
 \end{rmrk}
